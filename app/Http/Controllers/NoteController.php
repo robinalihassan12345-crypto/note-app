@@ -10,6 +10,7 @@ class NoteController extends Controller
     public function index()
     {
         $notes = Note::latest()->get();
+
         return view('notes.index', compact('notes'));
     }
 
